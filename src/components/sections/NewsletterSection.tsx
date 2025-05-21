@@ -25,7 +25,7 @@ export const NewsletterSection = ({
     setShowPopout((prev) => !prev);
   };
   return (
-    <section
+    <main
       className={`h-[450px]   
         container-padding
         sm:container-padding-off
@@ -62,6 +62,6 @@ export const NewsletterSection = ({
         className="absolute sm:bottom-10 mdm:right-20 sm:right-10 hidden md:inline lg:scale-[1] md:scale-[0.5]"
       />
       {showPopout && <Popout handleClosePopout={handleTogglePopout} />}
-    </section>
+    </main>
   );
 };

@@ -18,11 +18,11 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
   const { category } = useArticleStore();
 
   return (
-    <div className="rounded-xl border border-light-gray w-full max-w-[390px] max-h-[400px]">
+    <article className="rounded-xl border border-light-gray w-full max-w-[390px] max-h-[400px]">
       <div className="relative">
         <img
           src={article?.urlToImage || "images/placeholder.jpg"}
-          alt="cover"
+          alt="Article cover image"
           className="w-full h-[220px] object-cover rounded-t-xl"
         />
         <Label />
@@ -37,6 +37,6 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
           />
         </div>
       </div>
-    </div>
+    </article>
   );
 };

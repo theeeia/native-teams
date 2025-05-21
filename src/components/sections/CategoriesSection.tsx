@@ -29,8 +29,8 @@ export const CategoriesSection = () => {
   };
 
   return (
-    <section className="relative my-10 container-padding ">
-      <div className="flex gap-5 overflow-x-auto whitespace-nowrap flex-nowrap sm:flex-wrap container-width">
+    <main className="relative my-10 container-padding ">
+      <section className="flex gap-5 overflow-x-auto whitespace-nowrap flex-nowrap sm:flex-wrap container-width">
         {categories.map((cat) => {
           return (
             <Button
@@ -41,7 +41,7 @@ export const CategoriesSection = () => {
             />
           );
         })}
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };

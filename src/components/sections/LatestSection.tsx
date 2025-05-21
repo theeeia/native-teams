@@ -41,14 +41,14 @@ export const LatestSection = () => {
   }, [articles, category]);
 
   return (
-    <section className="container-padding ">
-      <div className="rounded-[20px] container-width bg-ice-cold py-[70px] sm:px-[100px] px-[30px] flex min-h-[560px] ">
+    <main className="container-padding ">
+      <section className="rounded-[20px] container-width bg-ice-cold py-[70px] sm:px-[100px] px-[30px] flex min-h-[560px] ">
         {latestArticle ? (
           <LatestArticle article={latestArticle} />
         ) : (
           <p className="my-10 text-center ">Loading...</p>
         )}
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };

@@ -31,7 +31,7 @@ export const ArticleContent = ({
             {title ?? ""}
           </h1>
           <div className="flex justify-center items-center gap-3 text-gray-500 text-sm">
-            <p>{formattedDate}</p>
+            <time>{formattedDate}</time>
             <span>|</span>
             <p>6 min read</p>
           </div>

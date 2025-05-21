@@ -26,8 +26,8 @@ export const ArticlesSection = () => {
     return <p className="my-10 text-center">No posts found.</p>;
 
   return (
-    <section className="container-padding">
-      <div className="container-width mt-10 mb-20">
+    <main className="container-padding">
+      <section className="container-width mt-10 mb-20">
         <h1 className="text-3xl my-10 font-bold capitalize">
           {category} posts
         </h1>
@@ -39,7 +39,7 @@ export const ArticlesSection = () => {
         </div>
 
         <Pagination />
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };

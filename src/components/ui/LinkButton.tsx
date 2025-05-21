@@ -20,7 +20,7 @@ export const LinkButton = ({ label, href }: LinkButtonProps) => {
       {label}
       <img
         src="/images/right-arrow.svg"
-        alt="arrow icon"
+        alt="Arrow icon"
         className="w-5 h-6 inline"
       />
     </Link>

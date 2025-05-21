@@ -34,7 +34,11 @@ export const Header = () => {
           </Link>
         </div>
 
-        <img src={"/images/menu.png"} className="md:hidden mr-5"></img>
+        <img
+          src={"/images/menu.png"}
+          alt="Menu icon"
+          className="md:hidden mr-5"
+        />
       </div>
     </header>
   );

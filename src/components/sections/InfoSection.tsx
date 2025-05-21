@@ -11,7 +11,7 @@ interface InfoSectionProps {
  */
 export const InfoSection = ({ darkTheme = false }: InfoSectionProps) => {
   return (
-    <section
+    <main
       className={`h-[450px]   
         bg-[position:right_center]
         sm:bg-[position:center_center] 
@@ -41,6 +41,6 @@ export const InfoSection = ({ darkTheme = false }: InfoSectionProps) => {
         your journey towards success.
       </div>
       <Button label="Learn More" colorMain mobileWidth />
-    </section>
+    </main>
   );
 };

@@ -26,7 +26,7 @@ export const Footer = () => {
                 {section.header}
                 <img
                   src="/images/down-arrow.svg"
-                  alt="arrow icon"
+                  alt="Arrow icon"
                   className="w-3 h-3 inline sm:hidden"
                 />
               </h4>

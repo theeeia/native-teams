@@ -27,8 +27,8 @@ export const SearchSection = () => {
     router.push(`/search/?${params.toString()}`);
   };
   return (
-    <section className="relative my-10 container-padding sm:px-6 md:px-10 overflow:hidden ">
-      <div className="container-width relative  overflow:hidden ">
+    <main className="relative my-10 container-padding sm:px-6 md:px-10 overflow:hidden ">
+      <section className="container-width relative  overflow:hidden ">
         <div
           className="absolute            
             md:right-[13%]         
@@ -62,7 +62,7 @@ export const SearchSection = () => {
             initialInput={queryParams.get("q") || ""}
           />
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
