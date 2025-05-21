@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --main: #5152fb;
+  --gray: #838a90;
+  --light-gray: #a8a8a8;
+  --ice-cold: #ebf3ff;
+  --dark-blue: #1f2068;
+  --midnight-blue: #0a0a2b;
+  --light-lilac: #8d95ff;
+  --light-purple: #ddddfd;
+  --lighter-gray: #f0f2f7;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-main: var(--main);
+  --color-gray: var(--gray);
+  --color-light-gray: var(--light-gray);
+  --color-ice-cold: var(--ice-cold);
+  --color-dark-blue: var(--dark-blue);
+  --color-midnight-blue: var(--midnight-blue);
+  --color-light-lilac: var(--light-lilac);
+  --color-light-purple: var(--light-purple);
+  --color-lighter-gray: var(--lighter-gray);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Helvetica, sans-serif;
+}
+
+.text-important {
+  @apply text-lg font-semibold text-blue-600;
+}
+
+.container-padding {
+  @apply px-5 lg:px-[120px] w-full;
+}
+
+.container-width {
+  @apply w-full max-w-[1200px] mx-auto;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
