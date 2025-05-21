@@ -1,7 +1,7 @@
 "use client";
 
 interface ButtonProps {
-  text: string;
+  label: string;
   handleClick?: (value: string) => void;
   colorMain?: boolean;
   paddingX?: string;
@@ -9,8 +9,19 @@ interface ButtonProps {
   mobileWidth?: boolean;
 }
 
+/**
+ * A button component.
+ *
+ * Props:
+ * - label: Button label text.
+ * - handleClick: Optional click handler. Receives value as an argument.
+ * - colorMain: If true, uses main color styling; otherwise uses lighter-gray.
+ * - paddingX: Horizontal padding (defaults to "24px").
+ * - paddingY: Vertical padding (defaults to "14px").
+ * - mobileWidth: If true, button spans full width on mobile.
+ */
 export const Button = ({
-  text,
+  label,
   handleClick,
   colorMain = false,
   paddingX = "24px",
@@ -19,7 +30,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      value={text}
+      value={label}
       onClick={(e) => handleClick?.(e.currentTarget.value)}
       className={`rounded-[50px] py-[14px] px-[24px] text-base font-medium cursor-pointer capitalize hover:brightness-130 transition-all 
         ${colorMain ? "bg-main text-white" : "bg-lighter-gray text-black"} ${
@@ -28,7 +39,7 @@ export const Button = ({
       style={{ padding: `${paddingY} ${paddingX}` }}
       type="submit"
     >
-      {text}
+      {label}
     </button>
   );
 };

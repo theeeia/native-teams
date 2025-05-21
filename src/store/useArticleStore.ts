@@ -25,6 +25,28 @@ interface ArticleState {
   ) => Promise<Article | null>;
 }
 
+/**
+ * Zustand store for managing articles and related UI state.
+ *
+ * State:
+ * - articles: A record mapping categories to arrays of articles.
+ * - category: The currently selected article category.
+ * - searchQuery: Current text query for filtering articles.
+ * - currentPage: Current page number for pagination.
+ * - loading: Indicates if articles are being fetched.
+ * - fetchError: Stores any error message from fetching articles.
+ *
+ * Actions:
+ * - setArticles: Replace the entire articles record.
+ * - setCategory: Set the active category and reset page/query.
+ * - setQuery: Set the search query and reset page.
+ * - setCurrentPage: Set the current pagination page.
+ * - fetchArticles: Fetch articles from the API for a given category, cached if already fetched.
+ * - getFilteredArticles: Return articles filtered by search query for the current category.
+ * - getPaginatedArticles: Return a page of filtered articles (9 per page).
+ * - getTotalPages: Calculate total pages based on filtered articles.
+ * - fetchArticleByTitle: Fetch a single article by category and slug, fetches category if needed.
+ */
 export const useArticleStore = create<ArticleState>((set, get) => ({
   articles: {} as Record<Category, Article[]>,
   category: "general",

@@ -9,6 +9,12 @@ import { useSyncStoreWithUrl } from "@/utils/useSyncStoreWithUrl";
 import { useArticleStore } from "@/store/useArticleStore";
 import { useEffect } from "react";
 
+/**
+ * Home page component that has different sections
+ *
+ * Syncs the article store with the URL and fetches articles whenever the
+ * selected category changes.
+ */
 export default function Home() {
   const { category, fetchArticles } = useArticleStore();
 

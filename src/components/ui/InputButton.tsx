@@ -3,10 +3,22 @@ interface InputButtonProps {
   placeholder: string;
   buttonLabel: string;
   inputType: string;
-  handleClick?: (value: string) => void;
   inputValue: string;
   handleInputChange: (value: string) => void;
+  handleClick?: (value: string) => void;
 }
+
+/**
+ * A full-width input field with an attached button.
+ *
+ * Props:
+ * - placeholder: Placeholder text for the input field.
+ * - buttonLabel: Label text for the button.
+ * - inputType: HTML input type (e.g., "text", "email").
+ * - inputValue: The current input value.
+ * - handleInputChange: Callback to update the input value.
+ * - handleClick: Optional callback triggered on button click, receives current input value.
+ */
 export const InputButton = ({
   placeholder,
   buttonLabel,
@@ -30,7 +42,7 @@ export const InputButton = ({
       </div>
       <div className="mt-2 sm:mt-0 w-full sm:w-auto ml-0 sm:-ml-15 whitespace-nowrap">
         <Button
-          text={buttonLabel}
+          label={buttonLabel}
           colorMain
           paddingX="44px"
           mobileWidth

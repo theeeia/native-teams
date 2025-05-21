@@ -5,6 +5,12 @@ interface ArticleContainerProps {
   article: Article | null;
 }
 
+/**
+ * Container component that displays the full article content and the author information.
+ *
+ * Props:
+ * - article: The article object containing title, image, date, description, content, and author.
+ */
 export const ArticleContainer = ({ article }: ArticleContainerProps) => {
   const parsedDate = new Date(article?.publishedAt ?? "");
   const formattedDate = parsedDate.toLocaleDateString("en-US", {

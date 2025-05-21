@@ -4,6 +4,12 @@ import { useArticleStore } from "@/store/useArticleStore";
 import { useRouter, useSearchParams } from "next/navigation";
 import ReactPaginate from "react-paginate";
 
+/**
+ * Pagination component renders page controls for navigating article pages.
+ *
+ * It uses ReactPaginate for UI and syncs the current page with the URL query parameter.
+ * Pagination is hidden if there is only one page.
+ */
 export const Pagination = () => {
   const router = useRouter();
   const { currentPage, getTotalPages } = useArticleStore();

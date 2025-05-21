@@ -7,6 +7,11 @@ interface LatestArticleProps {
   article: Article;
 }
 
+/**
+ * Displays the latest article with image, title, description,
+ * reading time, and a link to read the full article.
+ *
+ */
 export const LatestArticle = ({ article }: LatestArticleProps) => {
   const { category } = useArticleStore();
   return (
@@ -18,8 +23,8 @@ export const LatestArticle = ({ article }: LatestArticleProps) => {
           className="h-full object-scale-down mx-auto"
         />
       </div>
-      <div className=" order-1 sm:order-2 flex flex-col justify-around gap-5">
-        <div className=" hidden sm:block bg-main text-white h-[35px] w-[100px] flex items-center justify-center rounded-xl text-xs">
+      <div className="order-1 sm:order-2 flex flex-col justify-around  gap-5">
+        <div className="hidden sm:flex bg-main text-white h-[35px] w-[100px] items-center justify-center rounded-xl text-xs">
           6 min read
         </div>
         <h1 className="text-3xl font-bold">{article?.title ?? ""}</h1>

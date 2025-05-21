@@ -8,6 +8,12 @@ interface ArticleCardProps {
   article: Article;
 }
 
+/**
+ * Card component to display a summary of an article, including image, title, and a link to read more.
+ *
+ * Props:
+ * - article: The article object.
+ */
 export const ArticleCard = ({ article }: ArticleCardProps) => {
   const { category } = useArticleStore();
 

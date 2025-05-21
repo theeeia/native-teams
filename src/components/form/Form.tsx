@@ -8,6 +8,18 @@ interface FormProps {
   inputType: string;
   initialInput: string;
 }
+
+/**
+ * Controlled form component with an input and submit button.
+ *
+ * Props:
+ * - handleButtonClick: Callback fired on form submit with the current input value.
+ * - placeholder: Placeholder text for the input field.
+ * - buttonLabel: Label text for the submit button.
+ * - inputType: Type attribute for the input (e.g., "text", "email").
+ * - initialInput: Initial value for the input field (default is empty string).
+ *
+ */
 export const Form = ({
   handleButtonClick,
   placeholder,

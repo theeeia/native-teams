@@ -1,45 +1,12 @@
 "use client";
 
+import { footerData } from "@/utils/constants";
 import Image from "next/image";
 
-const footerData = [
-  {
-    header: "Platform",
-    links: [
-      "Employer of Record",
-      "PEO Services",
-      "Company as a Service",
-      "Work Payments",
-      "Global Payroll",
-      "Tax Managment",
-      "Expenses Management",
-    ],
-  },
-  {
-    header: "Information",
-    links: [
-      "Legal Entity",
-      "Client Invoicing",
-      "Payment Requests",
-      "Global Mobility",
-      "Employee Benefits",
-      "For Startups",
-    ],
-  },
-  {
-    header: "Company",
-    links: [
-      "About",
-      "Our Countries",
-      "Affiliates",
-      "Partnerships",
-      "Charity",
-      "Data & Security",
-      "Book a demo",
-      "Contact",
-    ],
-  },
-];
+/**
+ * Footer component displaying company logo, navigation sections, and legal links.
+ *
+ */
 export const Footer = () => {
   return (
     <footer className="bg-dark-blue ">

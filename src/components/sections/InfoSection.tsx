@@ -3,6 +3,12 @@ interface InfoSectionProps {
   darkTheme?: boolean;
 }
 
+/**
+ * Displays a promotional section with heading, description, and a call-to-action button.
+ *
+ * Props:
+ * - darkTheme: If true, applies dark background and white text styling.
+ */
 export const InfoSection = ({ darkTheme = false }: InfoSectionProps) => {
   return (
     <section
@@ -34,7 +40,7 @@ export const InfoSection = ({ darkTheme = false }: InfoSectionProps) => {
         personal growth with Native Teams. Explore our platform today and start
         your journey towards success.
       </div>
-      <Button text="Learn More" colorMain mobileWidth />
+      <Button label="Learn More" colorMain mobileWidth />
     </section>
   );
 };

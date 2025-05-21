@@ -9,6 +9,16 @@ import { Article, Category } from "@/types/types";
 import { InfoSection } from "@/components/sections/InfoSection";
 import { NewsletterSection } from "@/components/sections/NewsletterSection";
 
+/**
+ * Article page component that fetches and displays a single article
+ * based on the URL parameters `category` and `slug`.
+ *
+ * It shows a loading state while fetching the article, and
+ * handles the case when the article is not found.
+ *
+ * Also renders breadcrumb navigation, article content, and
+ * additional informational and newsletter sections.
+ */
 const ArticlePage = () => {
   const { category, slug }: { category: Category; slug: string } = useParams();
   const { fetchArticleByTitle } = useArticleStore();

@@ -3,6 +3,13 @@ import Image from "next/image";
 interface PopoutProps {
   handleClosePopout: () => void;
 }
+
+/**
+ * A popout modal with a close button and confirmation message.
+ *
+ * Props:
+ * - handleClosePopout: Function to close the popout.
+ */
 export const Popout = ({ handleClosePopout }: PopoutProps) => {
   return (
     <div className="fixed inset-0 z-50 items-center flex justify-center backdrop-blur-sm bg-black/30 ">

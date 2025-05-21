@@ -3,6 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
+/**
+ * Header component that renders the site logo, navigation links, and a call-to-action button.
+ *
+ */
 export const Header = () => {
   return (
     <header className="bg-white h-[90px] container-padding flex items-center ">

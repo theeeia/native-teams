@@ -4,6 +4,13 @@ interface LinkButtonProps {
   href: string;
 }
 
+/**
+ * A styled link button with a label and right arrow icon.
+ *
+ * Props:
+ * - label: Text to display inside the button.
+ * - href: Destination URL.
+ */
 export const LinkButton = ({ label, href }: LinkButtonProps) => {
   return (
     <Link

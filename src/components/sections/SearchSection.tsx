@@ -4,6 +4,11 @@ import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { Form } from "../form/Form";
 
+/**
+ * Displays the blog header and a search input form.
+ *
+ * On search input it updates the `q` query param in the URL and resets page to 1.
+ */
 export const SearchSection = () => {
   const queryParams = useSearchParams();
 
@@ -22,10 +27,10 @@ export const SearchSection = () => {
     router.push(`/search/?${params.toString()}`);
   };
   return (
-    <section className="relative my-10 container-padding sm:px-6 md:px-10">
-      <div className="container-width relative">
+    <section className="relative my-10 container-padding sm:px-6 md:px-10 overflow:hidden ">
+      <div className="container-width relative  overflow:hidden ">
         <div
-          className="absolute 
+          className="absolute            
             md:right-[13%]         
             sm:left-[5%]
             -left-[5%]
@@ -34,7 +39,7 @@ export const SearchSection = () => {
             w-[45px] h-[45px] 
             sm:w-[300px] sm:h-[120px]
             md:w-[600px] md:h-[180px]
-            lg:w-[940px] lg:h-[220px] 
+            lg:w-[800px] lg:h-[220px] 
             bg-[url('/images/post-icon.png')]
             sm:bg-[url('/images/search-bg.png')] bg-cover bg-left "
         />

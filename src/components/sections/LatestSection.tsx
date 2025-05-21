@@ -4,6 +4,13 @@ import { LatestArticle } from "../article/LatestArticle";
 import { useArticleStore } from "@/store/useArticleStore";
 import { Article } from "@/types/types";
 
+/**
+ * Displays the most recent article for the selected category.
+ *
+ * It listens to articles and category from the global article store,
+ * sorts articles by publication date, and shows the latest one.
+ *
+ */
 export const LatestSection = () => {
   const { articles, category } = useArticleStore();
   const [latestArticle, setLatestArticle] = useState<Article | null>(null);
@@ -35,7 +42,7 @@ export const LatestSection = () => {
 
   return (
     <section className="container-padding ">
-      <div className="rounded-[20px] container-width bg-ice-cold py-[70px] px-[100px] flex min-h-[560px] ">
+      <div className="rounded-[20px] container-width bg-ice-cold py-[70px] sm:px-[100px] px-[30px] flex min-h-[560px] ">
         {latestArticle ? (
           <LatestArticle article={latestArticle} />
         ) : (

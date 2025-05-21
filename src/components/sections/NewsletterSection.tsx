@@ -6,6 +6,16 @@ interface NewsletterSectionProps {
   darkTheme?: boolean;
 }
 
+/**
+ * It renders a subscription form with a confirmation popout.
+ *
+ * Props:
+ * - darkTheme: If true, applies dark background and white text styling.
+ *
+ * Features:
+ * - On form submit, displays a Popout modal.
+ * - Includes background imagery and conditional theme support.
+ */
 export const NewsletterSection = ({
   darkTheme = false,
 }: NewsletterSectionProps) => {

@@ -4,6 +4,13 @@ import { Button } from "../ui/Button";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useArticleStore } from "@/store/useArticleStore";
 
+/**
+ * Displays a horizontal list of category buttons.
+ *
+ * Clicking a category updates the URL query parameters to filter articles by that category
+ * and resets the pagination to page 1.
+ *
+ */
 export const CategoriesSection = () => {
   const queryParams = useSearchParams();
   const pathname = usePathname();
@@ -29,7 +36,7 @@ export const CategoriesSection = () => {
             <Button
               key={cat}
               handleClick={handleClick}
-              text={cat}
+              label={cat}
               colorMain={cat === category}
             />
           );

@@ -2,6 +2,12 @@ interface ArticleAuthorProps {
   author: string;
 }
 
+/**
+ * Displays the author information section including the author's image, name, and a short bio.
+ *
+ * Props:
+ * - author: The name of the article author.
+ */
 export const ArticleAuthor = ({ author }: ArticleAuthorProps) => {
   return (
     <div className="relative mt-[90px]">

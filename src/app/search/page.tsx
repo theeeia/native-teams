@@ -7,6 +7,13 @@ import { useArticleStore } from "@/store/useArticleStore";
 import { useSyncStoreWithUrl } from "@/utils/useSyncStoreWithUrl";
 import { useEffect } from "react";
 
+/**
+ * Search page that displays search input, breadcrumb navigation,
+ * categories, and a list of articles filtered by the current category.
+ *
+ * Synchronizes the article store with the URL and fetches initial articles
+ * whenever the selected category changes.
+ */
 const SearchPage = () => {
   const { category, fetchArticles } = useArticleStore();
   useEffect(() => {

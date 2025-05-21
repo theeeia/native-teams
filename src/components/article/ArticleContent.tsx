@@ -6,6 +6,16 @@ interface ArticleContentProps {
   content: string;
 }
 
+/**
+ * Displays the detailed content of an article including title, date, image, description, and full content.
+ *
+ * Props:
+ * - title: The article's title.
+ * - formattedDate: The publication date, formatted as a string.
+ * - imageUrl: URL of the article's main image.
+ * - description: Short summary or description of the article.
+ * - content: Full body content of the article.
+ */
 export const ArticleContent = ({
   title,
   formattedDate,

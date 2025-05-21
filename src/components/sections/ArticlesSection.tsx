@@ -5,6 +5,14 @@ import { Article } from "@/types/types";
 import { Pagination } from "../pagination/Pagination";
 import { useArticleStore } from "@/store/useArticleStore";
 
+/**
+ * Displays a paginated list of articles filtered by category.
+ *
+ * It handles loading and error states, shows a message if no articles are found,
+ * and renders a card component for each article along with pagination controls.
+ *
+ * Uses global article store for data and state management.
+ */
 export const ArticlesSection = () => {
   const { getPaginatedArticles, loading, fetchError, category } =
     useArticleStore();

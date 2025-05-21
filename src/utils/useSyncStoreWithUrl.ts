@@ -3,6 +3,16 @@ import { Category } from "@/types/types";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
+/**
+ * Custom hook that syncs the article store state with the URL query parameters.
+ *
+ * - Reads `category`, `page`, and `q` (search query) parameters from the URL.
+ * - Updates the Zustand article store with these values if present.
+ * - If some parameters are missing from the URL but present in the store,
+ *   updates the URL to include those parameters, preserving sync.
+ * - Uses `router.replace` to update the URL without adding a new history entry.
+ *
+ */
 export const useSyncStoreWithUrl = () => {
   const queryParams = useSearchParams();
   const router = useRouter();
