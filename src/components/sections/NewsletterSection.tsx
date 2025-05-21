@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { EmailForm } from "../ui/EmailForm";
+import { Form } from "../form/Form";
 import { Popout } from "../ui/Popout";
 
 interface NewsletterSectionProps {
@@ -34,7 +34,13 @@ export const NewsletterSection = ({
         <span className="text-main">latest news</span>
       </h1>
 
-      <EmailForm handleButtonClick={handleTogglePopout} />
+      <Form
+        handleButtonClick={handleTogglePopout}
+        placeholder="Email Address"
+        buttonLabel="Sign up"
+        inputType="email"
+        initialInput=""
+      />
 
       <div className="text-lg max-w-3xl text-center z-10">
         By submitting this form, you will receive emails from Native Teams.

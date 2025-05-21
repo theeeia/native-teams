@@ -1,7 +1,7 @@
 "use client";
 
 import { Breadcrumb } from "@/components/breadcrumb/Breadcrumb";
-import { ArticleDetails } from "@/components/article/ArticleDetails";
+import { ArticleContainer } from "@/components/article/ArticleContainer";
 import { useParams } from "next/navigation";
 import { useArticleStore } from "@/store/useArticleStore";
 import { useEffect, useState } from "react";
@@ -33,8 +33,8 @@ const ArticlePage = () => {
     <>
       <div className="container-padding ">
         <div className="container-width my-10">
-          <Breadcrumb title={article?.title ?? ""} />
-          <ArticleDetails article={article} />
+          <Breadcrumb title={article?.title ?? ""} category={category} />
+          <ArticleContainer article={article} />
         </div>
       </div>
       <InfoSection darkTheme />

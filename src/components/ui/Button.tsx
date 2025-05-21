@@ -26,6 +26,7 @@ export const Button = ({
         mobileWidth ? "w-full sm:w-auto" : ""
       }`}
       style={{ padding: `${paddingY} ${paddingX}` }}
+      type="submit"
     >
       {text}
     </button>

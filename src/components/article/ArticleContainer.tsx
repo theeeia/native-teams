@@ -1,11 +1,11 @@
 import { Article } from "@/types/types";
 import { ArticleContent } from "./ArticleContent";
 import { ArticleAuthor } from "./ArticleAuthor";
-interface ArticleDetailsProps {
+interface ArticleContainerProps {
   article: Article | null;
 }
 
-export const ArticleDetails = ({ article }: ArticleDetailsProps) => {
+export const ArticleContainer = ({ article }: ArticleContainerProps) => {
   const parsedDate = new Date(article?.publishedAt ?? "");
   const formattedDate = parsedDate.toLocaleDateString("en-US", {
     year: "numeric",

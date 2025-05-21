@@ -6,7 +6,8 @@ import { Pagination } from "../pagination/Pagination";
 import { useArticleStore } from "@/store/useArticleStore";
 
 export const ArticlesSection = () => {
-  const { getPaginatedArticles, loading, fetchError } = useArticleStore();
+  const { getPaginatedArticles, loading, fetchError, category } =
+    useArticleStore();
 
   if (loading) return <p className="my-10 text-center ">Loading...</p>;
 
@@ -19,7 +20,9 @@ export const ArticlesSection = () => {
   return (
     <section className="container-padding">
       <div className="container-width mt-10 mb-20">
-        <h1 className="text-3xl my-10 font-bold"> News posts</h1>
+        <h1 className="text-3xl my-10 font-bold capitalize">
+          {category} posts
+        </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 justify-items-center">
           {getPaginatedArticles().map((article: Article) => (

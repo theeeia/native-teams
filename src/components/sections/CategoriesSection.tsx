@@ -1,11 +1,12 @@
 "use client";
 import { categories } from "@/utils/constants";
 import { Button } from "../ui/Button";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useArticleStore } from "@/store/useArticleStore";
 
 export const CategoriesSection = () => {
   const queryParams = useSearchParams();
+  const pathname = usePathname();
   const { category } = useArticleStore();
   const router = useRouter();
 
@@ -15,7 +16,9 @@ export const CategoriesSection = () => {
     params.set("category", value);
     params.set("page", "1");
 
-    router.push(`/?${params.toString()}`);
+    const basePath = pathname.startsWith("/search") ? "/search" : "/";
+
+    router.push(`${basePath}?${params.toString()}`);
   };
 
   return (

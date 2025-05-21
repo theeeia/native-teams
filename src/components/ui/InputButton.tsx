@@ -1,27 +1,27 @@
-import { useState } from "react";
 import { Button } from "./Button";
 interface InputButtonProps {
   placeholder: string;
   buttonLabel: string;
   inputType: string;
   handleClick?: (value: string) => void;
-  initialInput?: string;
+  inputValue: string;
+  handleInputChange: (value: string) => void;
 }
 export const InputButton = ({
   placeholder,
   buttonLabel,
   inputType = "text",
   handleClick,
-  initialInput = "",
+  inputValue,
+  handleInputChange,
 }: InputButtonProps) => {
-  const [inputValue, setInputValue] = useState(initialInput);
   return (
     <div className="relative flex flex-col sm:flex-row w-full max-w-[580px]">
       <div className="flex flex-col sm:flex-row w-full max-w-[580px] bg-lighter-gray rounded-full gap-5 justify-between  ">
         <div className=" w-[100%] overflow-hidden pr-[0px] sm:pr-[50px] ">
           <input
             value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
+            onChange={(e) => handleInputChange(e.target.value)}
             type={inputType}
             placeholder={placeholder}
             className="w-full py-[14px] px-[24px] bg-transparent outline-none text-black"

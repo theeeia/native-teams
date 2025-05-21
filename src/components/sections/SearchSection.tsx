@@ -1,8 +1,8 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { InputButton } from "../ui/InputButton";
 import { useRouter } from "next/navigation";
+import { Form } from "../form/Form";
 
 export const SearchSection = () => {
   const queryParams = useSearchParams();
@@ -19,7 +19,7 @@ export const SearchSection = () => {
     }
     params.set("page", "1");
 
-    router.push(`/?${params.toString()}`);
+    router.push(`/search/?${params.toString()}`);
   };
   return (
     <section className="relative my-10 container-padding sm:px-6 md:px-10">
@@ -49,11 +49,11 @@ export const SearchSection = () => {
         </div>
 
         <div className="flex justify-center">
-          <InputButton
+          <Form
             placeholder="Search for posts"
             buttonLabel="Search"
             inputType="text"
-            handleClick={handleSearchClick}
+            handleButtonClick={handleSearchClick}
             initialInput={queryParams.get("q") || ""}
           />
         </div>
